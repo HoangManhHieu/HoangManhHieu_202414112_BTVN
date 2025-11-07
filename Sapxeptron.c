@@ -49,6 +49,6 @@ int main() {
     mergeSort(arr, aux, 0, lenght - 1, lenght);
     printf("Mảng sau khi sắp xếp: ");
     printArray(arr, lenght);
-
     return 0;
+
 }
