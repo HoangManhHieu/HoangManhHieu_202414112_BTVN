@@ -103,21 +103,22 @@ void addSv( List* list, Sinhvien sv){
     tmp->next = newNode;
 }
 int main() {
-    List myList;
-    listnull(&myList);
-    addlist(&myList, DSSV("Hoang Manh Hieu", "202414112", 2006, 3.9));
-    addlist(&myList, DSSV("Hoang Minh Hieu", "202414113", 2006, 2.1));
-    addlist(&myList, DSSV("Hoang van Hieu", "202414114", 2006, 3.4));
+    List dssv;
+    listnull(&dssv);
+    addlist(&dssv, DSSV("Hoang Manh Hieu", "202414112", 2006, 3.9));
+    addlist(&dssv, DSSV("Hoang Minh Hieu", "202414113", 2006, 2.1));
+    addlist(&dssv, DSSV("Hoang van Hieu", "202414114", 2006, 3.4));
     printf("1. Danh sach ban dau:\n");
-    exportDS(&myList);
-    printf("Chieu dai danh sach: %d\n", lengthList(&myList));
-    printf("So luong GPA > 3.2: %d\n", searchGpa(&myList));
-    Sortgpa(&myList);
-    exportDS(&myList);
+    exportDS(&dssv);
+    printf("Chieu dai danh sach: %d\n", lengthList(&dssv));
+    printf("So luong GPA > 3.2: %d\n", searchGpa(&dssv));
+    Sortgpa(&dssv);
+    exportDS(&dssv);
     Sinhvien svMoi = DSSV("Hoang Van Hieu", "202414115", 2004, 2.4);
-    addSv(&myList, svMoi);
+    addSv(&dssv, svMoi);
     
-    exportDS(&myList);
+    exportDS(&dssv);
 
     return 0;
+
 }
